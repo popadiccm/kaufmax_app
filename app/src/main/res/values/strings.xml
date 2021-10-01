@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kaufmax</string>
+    <string name="kaufmax">KAUFMAX</string>
+    <string name="meni">MENI</string>
+    <string name="artikli">ARTIKLI</string>
+    <string name="rafovi">RAFOVI</string>
+    <string name="paketi">PAKETI</string>
+    <string name="izloguj_se">IZLOGUJ SE</string>
+    <string name="artikal">ARTIKAL</string>
+    <string name="artiklii">ARTIKLI</string>
+    <string name="rafovii">RAFOVI</string>
+    <string name="paketii">PAKETI</string>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Paket"
+    android:background="#EBEBEB">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/paketiHeader"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/header_background"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textPaket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/paketii"
+            android:textColor="#002D62"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/rafovii"
+            android:src="@drawable/kaufmax"
+            app:layout_constraintBottom_toBottomOf="@+id/textPaket"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textPaket"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginHorizontal="15dp"
+        android:id="@+id/paket">
+
+        <EditText
+            android:id="@+id/unospaketa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unesite šifru paketa"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorHighlight="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nadjipaket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="nadjiPaket"
+            android:text="Pretrazi"
+            android:textColor="#002D62"
+            tools:ignore="UsingOnClickInXml"
+            android:layout_marginBottom="50px"/>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#EBEBEB"
+            android:layout_alignParentLeft="true" >
+
+            <HorizontalScrollView
+                android:id="@+id/hscrll2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TableLayout
+                        android:id="@+id/table_main3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        >
+                    </TableLayout>
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+
+
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/nazad3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="Nazad"
+            android:text="Nazad"
+            android:textColor="#002D62"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

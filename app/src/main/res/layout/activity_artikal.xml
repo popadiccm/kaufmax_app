@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    tools:context="com.example.kaufmax.Artikal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_margin="55dp"
+        android:id="@+id/meni">
+
+        <EditText
+            android:id="@+id/unosartikla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unesite sifru artikla"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nadjiartikal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="nadjiArtikal"
+            android:text="Pretrazi"
+            tools:ignore="UsingOnClickInXml"
+            android:layout_marginBottom="60dp"/>
+
+
+
+        <TableLayout
+            android:id="@+id/table_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="5dp"
+            android:background="#f1f1f1"
+            >
+        </TableLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nazad1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="Nazad"
+            android:text="nazad"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="40px"
+            tools:ignore="UsingOnClickInXml" />
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

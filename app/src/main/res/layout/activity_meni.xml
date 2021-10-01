@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    tools:context=".Meni">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/meniHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textKaufmax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/meni"
+            android:textColor="#002D62"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/kaufmax"
+            android:src="@drawable/kaufmax"
+            app:layout_constraintBottom_toBottomOf="@+id/textKaufmax"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textKaufmax"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meniHeader">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Con1">
+
+            <LinearLayout
+                android:id="@+id/layoutArtikal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:onClick="ArtikalFun"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/layoutRaf"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/artikal3"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/artikli"
+                    android:textColor="#002D62"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutRaf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:onClick="RafFun"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layoutArtikal"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/raf3"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/rafovi"
+                    android:textColor="#002D62"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPaket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:onClick="PaketFun"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toStartOf="@+id/layoutRaf"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutArtikal"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/paket3"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/paketi"
+                    android:textColor="#002D62"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutLogOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/white_rectangle"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:onClick="Izloguj"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layoutArtikal"
+                app:layout_constraintTop_toBottomOf="@id/layoutRaf"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/logout"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/izloguj_se"
+                    android:textColor="#002D62"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

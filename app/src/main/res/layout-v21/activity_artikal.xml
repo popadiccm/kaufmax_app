@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:background="#EBEBEB"
+    tools:context="com.example.kaufmax.Artikal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/artikliHeader"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/header_background"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textArtikal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/artiklii"
+            android:textColor="#002D62"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/artiklii"
+            android:src="@drawable/kaufmax"
+            app:layout_constraintBottom_toBottomOf="@+id/textArtikal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textArtikal"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginHorizontal="15dp"
+        android:id="@+id/artikal">
+
+        <EditText
+            android:id="@+id/unosartikla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unesite šifru artikla"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginHorizontal="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textColorHighlight="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nadjiartikal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="nadjiArtikal"
+            android:text="Pretrazi"
+            android:textColor="#002D62"
+            tools:ignore="UsingOnClickInXml"
+            android:layout_marginBottom="60px"/>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#EBEBEB"
+            android:layout_alignParentLeft="true" >
+
+            <HorizontalScrollView
+                android:id="@+id/hscrll1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TableLayout
+                        android:id="@+id/table_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+                    </TableLayout>
+                </RelativeLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/nazad1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="Nazad"
+            android:textColor="#002D62"
+            android:text="Nazad"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp"/>
+    </RelativeLayout>
+
+</FrameLayout>
